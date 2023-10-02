@@ -28,7 +28,7 @@ ADD ./java_app/ /tmp
 WORKDIR /tmp
 EXPOSE 6000
 
-ENTRYPOINT ["java", "SimpleEchoServer"]
+ENTRYPOINT ["java", "SimpleTimeServer"]
 ```
 2. create docker image
 ```bash
