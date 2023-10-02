@@ -58,8 +58,21 @@ web-server-test   latest    09c616a69982   48 minutes ago   654MB
 3. to run the docker
 ```bash
 $ sudo docker run -p 6000:6000 web-server-test
-// to run it in detached mode
-sudo docker run -d -p 6000:6000 web-server-test
+sudo docker run -p 6000:6000 web-server-test
+Simple Echo Server
+Waiting for connection…..
+```
+
+To run it in detached mode
+```bash
+$ sudo docker run -d -p 6000:6000 web-server-test
+bb19cebf763c4a249cba0cb5c62d008ec6fb3b7dd12ddb6d0e209c9c0a9c268e
+```
+To check running container
+```bash
+$ sudo docker container ls
+CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+bb19cebf763c   web-server-test   "java SimpleEchoServ…"   39 seconds ago   Up 38 seconds   0.0.0.0:6000->6000/tcp, :::6000->6000/tcp   jovial_golic
 ```
 ## To check the server from diff terminal 
 ```bash
@@ -68,5 +81,10 @@ curl -i http://localhost:6000
 HTTP/1.1 200 OK
 
 Mon Oct 02 17:12:43 UTC 2023
+```
+
+## To stop the container
+```bash
+$ docker stop bb19cebf763c
 ```
 
