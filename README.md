@@ -76,7 +76,7 @@ bb19cebf763c   web-server-test   "java SimpleEchoServ…"   39 seconds ago   Up 
 ```
 ## To check the server from diff terminal 
 ```bash
-curl -i http://localhost:6000
+$ curl -i http://localhost:6000
 
 HTTP/1.1 200 OK
 
